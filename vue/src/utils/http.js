@@ -5,7 +5,7 @@ import storage from '@/utils/storage'
 const http = axios.create({
     timeout: 1000 * 86400,
     withCredentials: true,
-    baseURL: '/springboot1hme0',
+    baseURL: process.env.VUE_APP_BASE_API || '/springboot1hme0',
     headers: {
         'Content-Type': 'application/json; charset=utf-8'
     }
